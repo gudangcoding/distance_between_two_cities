@@ -1,5 +1,14 @@
+form {
+	width: 800px;
+	margin: auto;
+}
+
+#submit-container{
+	width: 100px;
+	display: inline-block;
+}
+
 .input {
-	width: 200px;
 	display: inline-block;
 }
 #container {
@@ -8,7 +17,7 @@
 	margin-left: auto;
 	margin-bottom: 4em;
 	display: block;
-	width: 500px;
+	width: 800px;
 }
 
 #map-canvas { 
