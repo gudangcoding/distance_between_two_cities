@@ -1,11 +1,15 @@
+
+//Variable declarations ========================================================
 var map;
 var bounds = new google.maps.LatLngBounds();
-var markersArray = [];
 var origin;
 var destination;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 
+
+//jQuery UI code ========================================================
+$("#city1").focus();
 $("#submit").click(clickHandler);
 
 $('#city1, #city2').keydown(function(event){    
@@ -26,13 +30,13 @@ function getCities() {
 }
  
 
-//GMaps Distance Code:
+//GMaps Code ========================================================
 
 function initialize() {
 	directionsDisplay = new google.maps.DirectionsRenderer();
   	var options = {
-  	  center: new google.maps.LatLng(44.98, -93.26), //Minneapolis
-  	  zoom: 5
+  	  center: new google.maps.LatLng(39.5, -98.35), //http://en.wikipedia.org/wiki/Geographic_center_of_the_contiguous_United_States
+  	  zoom: 4
   	};
   	map = new google.maps.Map(document.getElementById('map-canvas'), options);
   	directionsDisplay.setMap(map);
@@ -62,9 +66,9 @@ function callback(response, status) {
 
     var results = response.rows[0].elements;
 
-    outputDiv.innerHTML += origins[0] + ' to ' + destinations[0]
-        + ': ' + results[0].distance.text + ' in '
-        + results[0].duration.text + '<br>';
+    outputDiv.innerHTML += 'Driving distance between <span id="origin-id">' + origins[0] 
+    	+ '</span> and <span id="destination-id">' 
+    	+ destinations[0] + '</span>: <span id="driving-distance-id">' + results[0].distance.text + '</span><br>';
   }
 }
 

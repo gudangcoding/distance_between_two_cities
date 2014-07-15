@@ -1,11 +1,10 @@
+body {
+	font-size: 14px;
+}
 #form {
 	display: inline-block;
 	width: 960px;
 	margin-bottom: 20px;
-}
-
-#form:not(:first-child) {
-    margin-left: 200;
 }
 
 .input {
@@ -35,4 +34,20 @@
 
 #submit-container {
 	margin-left: 40px;
+}
+
+#outputDiv {
+	font-size: 1.5em;
+}
+
+#origin-id {
+	color: #3AE800;
+}
+
+#destination-id {
+	color: #FC5817;
+}
+
+#driving-distance-id {
+	font-weight: bold;
 }
