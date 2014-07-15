@@ -1,23 +1,24 @@
-form {
-	width: 800px;
-	margin: auto;
+#form {
+	display: inline-block;
+	width: 960px;
+	margin-bottom: 20px;
 }
 
-#submit-container{
-	width: 100px;
-	display: inline-block;
+#form:not(:first-child) {
+    margin-left: 200;
 }
 
 .input {
-	display: inline-block;
+	display: inline-block
 }
+
 #container {
 	margin-top: 4em;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 4em;
 	display: block;
-	width: 800px;
+	width: 960px;
 }
 
 #map-canvas { 
@@ -26,4 +27,12 @@ form {
 	width: auto;
 	height: 600px;
 
+}
+
+#city2-container {
+	margin-left: 40px;
+}
+
+#submit-container {
+	margin-left: 40px;
 }
